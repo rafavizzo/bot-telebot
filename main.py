@@ -9,7 +9,7 @@ def op1(mensagem):
 
 @bot.message_handler(commands=['op2'])
 def op2(mensagem):
-    bot.send_message(mensagem.chat.id, 'o lucas é  gay ')
+    bot.send_message(mensagem.chat.id, 'o lucas é  gayy')
 
 
 @bot.message_handler(commands=['op3'])
