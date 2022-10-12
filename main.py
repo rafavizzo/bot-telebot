@@ -2,6 +2,18 @@ import telebot
 
 bot = telebot.TeleBot('5202524811:AAHk1zEhUS5vFIpYQf4Kc2BbmwoRw1QYdsI')
 
+@bot.message_handler(commands=['op1'])
+def op1(mensagem):
+  pass
+
+@bot.message_handler(commands=['op2'])
+def op2(mensagem):
+  pass
+
+@bot.message_handler(commands=['op3'])
+def op3(mensagem):
+  print(mensagem)
+  bot.send_message(mensagem.chat.id, 'Eai mano')
 
 
 def verificar(mensagem):
@@ -9,6 +21,14 @@ def verificar(mensagem):
 
 @bot.message_handler(func=verificar)
 def responder(mensagem):
-  bot.reply_to(mensagem, 'Olá aqui é o Bot do Rafudo')
+  text = """
+  Escolha uma opção para continuar (Clique no item):
+  /op1
+  /op2
+  /op3
+  """
+  bot.reply_to(mensagem, text)
+
+
 
 bot.polling()
