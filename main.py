@@ -4,11 +4,13 @@ bot = telebot.TeleBot('5202524811:AAHk1zEhUS5vFIpYQf4Kc2BbmwoRw1QYdsI')
 
 @bot.message_handler(commands=['op1'])
 def op1(mensagem):
-  pass
+    bot.send_message(mensagem.chat.id, 'renan é gay')
+
 
 @bot.message_handler(commands=['op2'])
 def op2(mensagem):
-  pass
+    bot.send_message(mensagem.chat.id, 'o lucas é gay')
+
 
 @bot.message_handler(commands=['op3'])
 def op3(mensagem):
@@ -28,7 +30,6 @@ def responder(mensagem):
   /op3
   """
   bot.reply_to(mensagem, text)
-
 
 
 bot.polling()
