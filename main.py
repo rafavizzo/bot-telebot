@@ -20,7 +20,7 @@ def verificar(mensagem):
 @bot.message_handler(func=verificar)
 def responder(mensagem):
   text = """
-  Escolha uma opção para continuar (Clique no item):
+  Você já ouviu falar sobre o Omega3 ?(Clique no item):
   /promo
   /beneficios
   """
