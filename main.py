@@ -6,6 +6,11 @@ bot = telebot.TeleBot('5202524811:AAHk1zEhUS5vFIpYQf4Kc2BbmwoRw1QYdsI')
 def op1(mensagem):
     bot.send_message(mensagem.chat.id, 'renan é gay')
 
+@bot.message_handler(commands=['login'])
+def login(mensagem):
+  login = input('Digite seu login')
+  print(login)
+
 @bot.message_handler(commands=['beneficios'])
 def beneficios(mensagem):
   bot.send_audio(mensagem.chat.id, open('benefi.mp3', 'rb'))  
